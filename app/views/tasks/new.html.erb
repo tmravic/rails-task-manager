@@ -1,0 +1,10 @@
+<h1>Add Task</h1>
+<% if @task.errors.any? %>
+  <% @task.errors.full_messages.each do |msg| %>
+    <p><%= msg %></p>
+  <% end %>
+<% end %>
+
+<%= render 'tasks/form' %>
+<hr>
+<i class="fas fa-history"></i> <%= link_to "Back to list", tasks_path %>
